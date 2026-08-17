@@ -24,9 +24,11 @@ const getAnimeList = async () => {
         detailBtn.addEventListener("click", () => goToDetailPage(anime.mal_id));
         animeContainer.innerHTML = `
             <img src="${anime.images.jpg.large_image_url}"/>
-            <h3>${anime.title}</h3>
-            <h3>${anime.title_japanese}</h3>
-            <p>${anime.synopsis}</p>
+            <div>
+              <h3>${anime.title}</h3>
+              <h3>${anime.title_japanese}</h3>
+              <p>${anime.synopsis}</p>
+            </div>
             `;
         animeContainer.appendChild(detailBtn);
         animeGrid.appendChild(animeContainer);
